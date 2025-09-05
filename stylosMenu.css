@@ -32,6 +32,10 @@
    font-weight: bold;
    font-size: 2rem;
  }
+ .logo img{
+    height: 7rem;
+    padding: .5rem;
+   }
 
  .menu {
    display: flex;
@@ -122,6 +126,7 @@
      justify-content: center;
      font-size: 1rem;
    }
+   
 
    .menu a {
      text-align: center;
