@@ -16,10 +16,11 @@
     body {
       background-color: var(--fundo);
       color: var(--texto);
+      position: relative;
     }
 
     header {
-      background: linear-gradient(135deg,  var(--verde-claro), var(--verde-principal));
+      background: linear-gradient(135deg, var(--verde-claro), var(--verde-principal));
       color: var(--branco);
       padding: 2rem 1rem;
       text-align: center;
@@ -35,7 +36,7 @@
       background-color: var(--branco);
       margin: 1rem auto;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       display: flex;
       overflow: hidden;
       max-width: 1000px;
@@ -83,9 +84,10 @@
     }
 
     @media (max-width: 768px) {
-      header img{
+      header img {
         display: none;
       }
+
       .section {
         flex-direction: column !important;
       }
@@ -98,24 +100,211 @@
       .section img {
         height: 200px;
       }
-      .slide h1{
+
+      .slide h1 {
         font-size: 1.5rem;
       }
-    }
-    @media (max-width: 1100px){
-      header img{
+
+      .redes {
         display: none;
       }
     }
-    header{
+
+    @media (max-width: 1100px) {
+      header img {
+        display: none;
+      }
+      .redes{
+        display: none;
+      }
+    }
+
+    header {
       position: relative;
     }
 
-    header img{
+    header img {
       width: 10rem;
       position: absolute;
       left: 0;
       top: 23px;
       margin-left: 10px;
     }
- 
+
+    .wrapper {
+      display: block;
+      list-style: none;
+      height: 120px;
+      width: 100%;
+      padding-top: 40px;
+      font-family: "Poppins", sans-serif;
+      justify-content: center;
+      position: absolute;
+      left: 10px;
+
+    }
+
+    .wrapper .icon {
+      position: relative;
+      background: #fff;
+      border-radius: 50%;
+      margin: 10px;
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .tooltip {
+      position: absolute;
+      top: 0;
+      font-size: 14px;
+      background: #fff;
+      color: #fff;
+      padding: 5px 8px;
+      border-radius: 5px;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .tooltip::before {
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      background: #fff;
+      bottom: -3px;
+      left: 50%;
+      transform: translate(-50%) rotate(45deg);
+      transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapper .icon:hover .tooltip {
+      top: -45px;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .wrapper .icon:hover span,
+    .wrapper .icon:hover .tooltip {
+      text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+    }
+
+    .wrapper .facebook:hover,
+    .wrapper .facebook:hover .tooltip,
+    .wrapper .facebook:hover .tooltip::before {
+      background: #1877f2;
+      color: #fff;
+    }
+
+    .wrapper .twitter:hover,
+    .wrapper .twitter:hover .tooltip,
+    .wrapper .twitter:hover .tooltip::before {
+      background: #1da1f2;
+      color: #fff;
+    }
+
+    .wrapper .instagram:hover,
+    .wrapper .instagram:hover .tooltip,
+    .wrapper .instagram:hover .tooltip::before {
+      background: #e4405f;
+      color: #fff;
+    }
+    /* From Uiverse.io by cssbuttons-io */ 
+button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.learn-more {
+ width: 12rem;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: var(--verde-claro);
+ border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 .5rem;
+ color: var(--verde-principal);
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
