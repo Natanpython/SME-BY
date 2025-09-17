@@ -1,53 +1,68 @@
  .meu-carousel {
-    position: relative;
-    width: 1000px;
-    overflow: hidden;
-    margin: 20px auto;
-  }
+   position: relative;
+   width: 1000px;
+   overflow: hidden;
+   margin: 20px auto;
+ }
 
-  .meu-carousel-track {
-    display: flex;
-    transition: transform 0.3s ease;
-    gap: 3rem;
-  }
+ .meu-carousel-track {
+   display: flex;
+   transition: transform 0.3s ease;
+   gap: 3rem;
+ }
 
-  .meu-carousel-item {
-    min-width: 100px;
-    margin: 0 10px;
-    text-align: center;
-  }
+ .meu-carousel-item {
+   min-width: 100px;
+   margin: 0 10px;
+   text-align: center;
+ }
 
-  .meu-carousel-item img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-  }
+ .meu-carousel-item img {
+   width: 150px;
+   height: 150px;
+   object-fit: contain;
+   background: #fff;
+   padding: 20px;
+   border-radius: 10px;
+ }
 
-  .meu-carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255,255,255,0.1);
-    border: none;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 10;
-  }
+ .meu-carousel button {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background: rgba(255, 255, 255, 0.1);
+   border: none;
+   color: white;
+   font-size: 20px;
+   cursor: pointer;
+   z-index: 10;
+ }
 
-  .meu-carousel button:hover {
-    background: #fff;
-  }
+ .meu-carousel button:hover {
+   background: #fff;
+ }
 
-  .meu-prev {
-    left: 0;
- 
-  }
+ .meu-prev {
+   left: 0;
 
-  .meu-next {
-    right: 0;
-    
-  }
+ }
+
+ .meu-next {
+   right: 0;
+
+ }
+
+ @media (max-width: 768px) {
+   .meu-carousel {
+     width: 350px
+   }
+
+   .meu-carousel-item img {
+    padding: 10px;
+     width: 100px;
+     height: 100px;
+   }
+   .meu-carousel-track{
+    gap: 25px;
+   }
+ }
