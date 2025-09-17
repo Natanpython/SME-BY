@@ -16,7 +16,15 @@
 body {
   background-color: var(--fundo);
   color: var(--texto);
-  height: 100vh;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  /* ocupa todo espaço disponível e empurra o footer pra baixo */
 }
 
 .imagemSecretaria {
@@ -73,39 +81,20 @@ body {
 
 footer {
   background-color: var(--verde-principal);
-  color: var(--branco);
   text-align: center;
   padding: 1rem;
+  margin-top: 4rem;
+}
+
+footer p {
+  color: var(--branco);
+  text-align: center;
   font-size: 0.9rem;
-  margin-top: 2rem;
 }
 
-.stop {
-  position: fixed;
-  /* ou absolute, dependendo do caso */
-  top: 100px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* agora pega todo o documento */
-  min-height: 100vh;
-  /* garante cobertura mínima */
-  background-color: rgb(59, 59, 59);
-  /* tonalidade */
-  z-index: 1000;
+.secretario img {
+  display: block;
 }
-
-.stopicon {
-  z-index: 1001;
-  position: fixed;
-  width: 500px;
-  top: 100px;
-  left: 400px;
-
-}
-.secretario img{
-    display: none;
-  }
 
 @media (max-width: 768px) {
   .stopicon {
@@ -113,10 +102,11 @@ footer {
     left: 0;
     width: 100%;
   }
-  .stop{
-      top: 50px;
+
+  .stop {
+    top: 50px;
   }
-  
+
 }
 
 /* @media (max-width: 1100px){
