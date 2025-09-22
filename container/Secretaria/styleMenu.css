@@ -126,6 +126,7 @@
 
    .menu.active {
      display: flex;
+     top: 60px;
    }
 
    .hamburger {

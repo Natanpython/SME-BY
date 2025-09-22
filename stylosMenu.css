@@ -22,7 +22,7 @@
    align-items: center;
    padding: 3rem;
    height: 60px;
-  
+
  }
 
  .logo {
@@ -32,10 +32,11 @@
    font-weight: bold;
    font-size: 2rem;
  }
- .logo img{
-    height: 7rem;
-    padding: .5rem;
-   }
+
+ .logo img {
+   height: 7rem;
+   padding: .5rem;
+ }
 
  .menu {
    display: flex;
@@ -48,7 +49,7 @@
  .menu a {
    color: var(--branco);
    text-decoration: none;
- z-index: 2000;
+   z-index: 2000;
  }
 
  .menu a:hover {
@@ -88,13 +89,13 @@
    background-color: var(--branco);
    transition: 0.4s ease;
    z-index: 2000;
-   
+
  }
 
  .hamburger.active .bar1 {
    transform: rotate(45deg) translate(5px, 5px);
    z-index: 2000;
-   
+
  }
 
  .hamburger.active .bar2 {
@@ -111,9 +112,10 @@
    .navbar {
      padding: 1rem;
    }
-   .logo img{
-    height: 4.5rem;
-    padding: .5rem;
+
+   .logo img {
+     height: 4.5rem;
+     padding: .5rem;
    }
 
    .menu {
@@ -132,7 +134,7 @@
      justify-content: center;
      font-size: 1rem;
    }
-   
+
 
    .menu a {
      text-align: center;
